@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Talk with AI</h1>
+        <h1>Made with ❤️ by Swas.py </h1>
       </header>
 
       <section>
