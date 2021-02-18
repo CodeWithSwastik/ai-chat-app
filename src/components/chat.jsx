@@ -6,8 +6,8 @@ export default function ChatMessage(props) {
   const messageClass = uid === 1 ? "sent" : "received";
   const imageURL =
     uid === 1
-      ? "https://www.flaticon.com/svg/vstatic/svg/826/826910.svg?token=exp=1613625262~hmac=2f2c8da1adc4e1cd9b5c4d61cb3b99d7"
-      : "https://www.flaticon.com/svg/vstatic/svg/2371/2371561.svg?token=exp=1613625324~hmac=5cdb29e06e209aec972aa4359452e4d9";
+      ? "https://img.icons8.com/color/48/000000/fox.png"
+      : "https://img.icons8.com/fluent/48/000000/bird.png";
 
   return (
     <>
