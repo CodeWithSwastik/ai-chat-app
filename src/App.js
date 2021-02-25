@@ -50,8 +50,6 @@ function ChatRoom() {
           },
         ]);
         dummy.current.scrollIntoView({ behavior: "smooth" });
-      }
-  
   };
 
   const sendMessage = async (e) => {
@@ -93,7 +91,6 @@ function ChatRoom() {
         </button>
       </form>
     </>
-  );
-}
+  );}
 
 export default App;
