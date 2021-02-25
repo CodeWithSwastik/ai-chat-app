@@ -50,7 +50,7 @@ function ChatRoom() {
           },
         ]);
         dummy.current.scrollIntoView({ behavior: "smooth" });
-      })
+      }
   
   };
 
