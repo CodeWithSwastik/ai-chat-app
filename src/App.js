@@ -91,6 +91,6 @@ function ChatRoom() {
         </button>
       </form>
     </>
-  );}
+  )};
 
 export default App;
