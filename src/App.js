@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { useState, useRef, useEffect } from "react";
 import ChatMessage from "./components/chat";
-import axios from "axios";
 
 function App() {
   return (
@@ -37,14 +36,12 @@ function ChatRoom() {
   });
 
   const message = async (msg) => {
-    axios
-      .get(`https://api.pgamerx.com/ai/response?message=${msg}?language=en`)
-      .then((response) => {
-        // handle success
-        const airesp = response.data[0];
-        const uid = 2;
+    let res = await fetch(`https://api.pgamerx.com/ai/response?message=${msg}`)
+    let json = await res.json()
+    const airesp = json[0];
+    const uid = 2;
 
-        setMessage([
+     setMessage([
           ...messages,
           {
             id: "_" + Math.random().toString(36).substr(2, 9),
@@ -54,13 +51,7 @@ function ChatRoom() {
         ]);
         dummy.current.scrollIntoView({ behavior: "smooth" });
       })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .then(() => {
-        // always executed
-      });
+  
   };
 
   const sendMessage = async (e) => {
